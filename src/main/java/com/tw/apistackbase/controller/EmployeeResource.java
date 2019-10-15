@@ -47,8 +47,8 @@ public class EmployeeResource {
 
     private Employee getEmployeeUsingId(int employeeId) {
         return employeeList.stream()
-                .filter(emp -> emp.getId() == employeeId)
-                .findFirst()
+                .filter(employee -> employee.getId() == employeeId)
+                .findAny()
                 .orElse(null);
     }
 }
